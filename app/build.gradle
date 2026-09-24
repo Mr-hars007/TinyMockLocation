@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mrhars007.mocklocation'
+    compileSdk 28
+    buildToolsVersion '37.0.0'
+
+    defaultConfig {
+        applicationId 'com.mrhars007.mocklocation'
+        minSdk 28
+        targetSdk 28
+        versionCode 1
+        versionName '1.0'
+    }
+
+    signingConfigs {
+        debug {
+            // Inherits default debug keystore
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Zero external dependencies - pure native Android framework APIs
+}

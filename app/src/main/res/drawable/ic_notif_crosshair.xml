@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Truss beam -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2,11.2 H22 V12.8 H2 Z" />
+
+    <!-- Left Solar Panels -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M3,6 H8 V10.5 H3 Z M3,13.5 H8 V18 H3 Z" />
+
+    <!-- Right Solar Panels -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,6 H21 V10.5 H16 Z M16,13.5 H21 V18 H16 Z" />
+
+    <!-- Central Station Core -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10.5,7 C10.5,6.5 13.5,6.5 13.5,7 V17 C13.5,17.5 10.5,17.5 10.5,17 Z" />
+
+    <!-- Cross module -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M9,10.5 H15 V13.5 H9 Z" />
+
+    <!-- GPS Signal Wave -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M9.5,19.5 C11,21 13,21 14.5,19.5" />
+
+</vector>

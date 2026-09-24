@@ -1,0 +1,35 @@
+# Built application files
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Gradle files
+.gradle/
+build/
+app/build/
+**/build/
+
+# Local configuration file (SDK location, etc)
+local.properties
+.env
+.env.*
+!.env.example
+
+# Android Studio / IntelliJ / VS Code
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log

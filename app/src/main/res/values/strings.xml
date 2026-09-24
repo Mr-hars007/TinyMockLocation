@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tiny Mock Location</string>
+    <string name="title">Tiny Mock Location</string>
+    <string name="label_latitude">Latitude</string>
+    <string name="label_longitude">Longitude</string>
+    <string name="btn_start">START</string>
+    <string name="btn_stop">STOP</string>
+    <string name="status_prefix">Status: </string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_running">Running</string>
+    <string name="adb_ready">ADB: Ready</string>
+    <string name="btn_battery_opt">Ignore Battery Optimization</string>
+</resources>

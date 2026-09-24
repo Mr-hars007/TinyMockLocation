@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Scaled and centered within Android's 66dp keyline safe zone to prevent clipping on sphere/circle/teardrop icon shapes -->
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.68"
+        android:scaleY="0.68">
+
+        <!-- Mission Star 1 (Top Left) -->
+        <path
+            android:fillColor="#5B8C85"
+            android:pathData="M34,18 L35.2,21.5 L38.5,22.5 L35.2,23.5 L34,27 L32.8,23.5 L29.5,22.5 L32.8,21.5 Z" />
+
+        <!-- Mission Star 2 (Bottom Right) -->
+        <path
+            android:fillColor="#7CA9A2"
+            android:pathData="M76,75 L77,77.5 L79.5,78.5 L77,79.5 L76,82 L75,79.5 L72.5,78.5 L75,77.5 Z" />
+
+        <!-- Main Central Truss Beam (Dark Slate Teal) -->
+        <path
+            android:fillColor="#26443E"
+            android:pathData="M18,48.5 H90 V51.5 H18 Z" />
+
+        <!-- Left Solar Array - Top Wing -->
+        <path
+            android:fillColor="#5B8C85"
+            android:pathData="M20,30 H36 V46 H20 Z" />
+
+        <!-- Left Solar Array - Bottom Wing -->
+        <path
+            android:fillColor="#5B8C85"
+            android:pathData="M20,54 H36 V70 H20 Z" />
+
+        <!-- Right Solar Array - Top Wing -->
+        <path
+            android:fillColor="#5B8C85"
+            android:pathData="M72,30 H88 V46 H72 Z" />
+
+        <!-- Right Solar Array - Bottom Wing -->
+        <path
+            android:fillColor="#5B8C85"
+            android:pathData="M72,54 H88 V70 H72 Z" />
+
+        <!-- Clean Solar Cell Partition Lines (Crisp light lines) -->
+        <path
+            android:strokeColor="#EAF2EE"
+            android:strokeWidth="1.2"
+            android:fillColor="#00000000"
+            android:pathData="M28,30 V46 M20,38 H36 M28,54 V70 M20,62 H36 M80,30 V46 M72,38 H88 M80,54 V70 M72,62 H88" />
+
+        <!-- Station Rotary Joints (Dark Accent) -->
+        <path
+            android:fillColor="#26443E"
+            android:pathData="M36,47.5 H41 V52.5 H36 Z M67,47.5 H72 V52.5 H67 Z" />
+
+        <!-- Main Pressurized Station Module (Cylinder Core) -->
+        <path
+            android:fillColor="#26443E"
+            android:pathData="M49,36 C49,33.5 59,33.5 59,36 V64 C59,66.5 49,66.5 49,64 Z" />
+
+        <!-- Center Cross Lab Module -->
+        <path
+            android:fillColor="#3D5A57"
+            android:pathData="M43,47.5 H65 V52.5 H43 Z" />
+
+        <!-- Forward Docking Cone (Top) -->
+        <path
+            android:fillColor="#5B8C85"
+            android:pathData="M51,34 C51,31 57,31 57,34 Z" />
+
+        <!-- Cupola Center Observation Port (White Dot) -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M54,50m-2,0a2,2 0 1,1 4,0a2,2 0 1,1 -4,0" />
+
+        <!-- GPS Location Pulse Broadcast Waves (Emanating downwards) -->
+        <path
+            android:strokeColor="#26443E"
+            android:strokeWidth="2.0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M48,72 C51,75.5 57,75.5 60,72" />
+
+        <path
+            android:strokeColor="#4A7C74"
+            android:strokeWidth="2.0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M43,78 C48.5,84 59.5,84 65,78" />
+
+        <path
+            android:strokeColor="#7CA9A2"
+            android:strokeWidth="2.0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M38,84 C46,92.5 62,92.5 70,84" />
+
+    </group>
+
+</vector>
