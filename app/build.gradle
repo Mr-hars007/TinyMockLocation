@@ -2,10 +2,23 @@ plugins {
     id 'com.android.application'
 }
 
+// Load environment properties from .env file if available
+ext.envProps = new Properties()
+def envFile = rootProject.file('.env')
+if (envFile.exists()) {
+    envFile.withReader('UTF-8') { reader ->
+        ext.envProps.load(reader)
+    }
+}
+
+ext.getEnvProperty = { String key, String defaultValue = null ->
+    return System.getenv(key) ?: (ext.envProps.getProperty(key) ?: (project.findProperty(key) ?: defaultValue))
+}
+
 android {
     namespace 'com.mrhars007.mocklocation'
     compileSdk 28
-    buildToolsVersion '37.0.0'
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId 'com.mrhars007.mocklocation'
@@ -16,6 +29,27 @@ android {
     }
 
     signingConfigs {
+        release {
+            def keystorePath = getEnvProperty("RELEASE_KEYSTORE_PATH")
+            def storePasswordVal = getEnvProperty("RELEASE_KEYSTORE_PASSWORD")
+            def keyAliasVal = getEnvProperty("RELEASE_KEY_ALIAS")
+            def keyPasswordVal = getEnvProperty("RELEASE_KEY_PASSWORD")
+
+            if (keystorePath) {
+                def keystoreFile = file(keystorePath)
+                if (!keystoreFile.exists()) {
+                    keystoreFile = rootProject.file(keystorePath)
+                }
+                if (keystoreFile.exists() && storePasswordVal && keyAliasVal && keyPasswordVal) {
+                    storeFile keystoreFile
+                    storePassword storePasswordVal
+                    keyAlias keyAliasVal
+                    keyPassword keyPasswordVal
+                    v1SigningEnabled true
+                    v2SigningEnabled true
+                }
+            }
+        }
         debug {
             // Inherits default debug keystore
         }
@@ -26,10 +60,14 @@ android {
             minifyEnabled true
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
+            if (signingConfigs.release.storeFile != null) {
+                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
+            }
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug

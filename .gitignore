@@ -16,6 +16,13 @@ local.properties
 .env.*
 !.env.example
 
+# Keystores & Signing Keys
+*.keystore
+*.jks
+*.p12
+*.key
+
+
 # Android Studio / IntelliJ / VS Code
 .idea/
 .vscode/

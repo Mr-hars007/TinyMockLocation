@@ -22,8 +22,8 @@ fi
 echo "Device detected: $DEVICES"
 
 # 3. Build APK
-echo "Building optimized APK..."
-JAVA_HOME=/usr/lib/jvm/java-21-openjdk ./gradlew assembleRelease
+echo "Building signed release APK..."
+./gradlew assembleRelease
 
 # 4. Install APK
 APK_PATH="app/build/outputs/apk/release/app-release.apk"
